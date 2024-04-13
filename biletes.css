@@ -1,0 +1,35 @@
+body{
+    min-height: 100vh;
+    background-image:url(Dineroo.jpg);
+    background-size: cover;
+}
+.letra{
+    text-align: center;
+}
+.titulo{
+    text-align: center;
+    color: rgb(12, 73, 31);
+    font-family: cursive;
+}
+.texto{
+    text-align: center;
+}
+.tamaño{
+    text-size-adjust: 100px;
+}
+.cita{
+    text-align: center;
+    color: rgb(255, 0, 0);
+    font-family: cursive;
+}
+.esf{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: center;
+}
+.imagen{
+    width:900px;
+    height: 350px;
+    opacity: 0.8;
+}

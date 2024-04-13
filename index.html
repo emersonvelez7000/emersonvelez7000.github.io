@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Moneda</title>
+    <link rel="stylesheet" href="biletes.css">
+</head>
+<body>
+    <hr>
+    <img class="imagen" src="pilo.jpg" alt="Descripción de la imagen"style="display: block; margin: auto;" width="30%">
+    <h2 class="titulo">Politecnico Change</h2>
+    <hr>
+    <h1 class="titulo">Convertidor a pesos Colombianos</h1>
+    <br><br>
+    <div class="texto">
+        <label style="color: rgb(170, 255, 0);" for="moneda">Selecciona la moneda:</label>
+            <select id="moneda">
+                <option value="EU">Euros</option>
+                <option value="USD">Dólares</option>
+                <option value="BR">Reales Brasileños</option>
+            </select>
+        <label style="color: rgb(170, 255, 0);" for="cantidad">Cantidad:</label>
+    
+        <input type="number" id="cantidad">
+        <button style="color: rgb(30, 160, 4);" onclick="convertir()">Convertir a pesos Colombianos</button>
+        <p id="resultado"></p>
+    </div>
+    <script>
+        function convertir() {
+            const moneda = document.getElementById('moneda').value;
+            const cantidad = document.getElementById('cantidad').value;
+
+            // Realizar la conversión a pesos colombianos
+            let tasaCambio = 0;
+
+            switch (moneda) {
+                case 'EU':
+                    tasaCambio = 4600; // Tasa de cambio Euros a Pesos Colombianos
+                    break;
+                case 'USD':
+                    tasaCambio = 3800; // Tasa de cambio Dólares a Pesos Colombianos
+                    break;
+                case 'BR':
+                    tasaCambio = 700; // Tasa de cambio Reales Brasileños a Pesos Colombianos
+                    break;
+                default:
+                    break;
+            }
+            const resultado = cantidad * tasaCambio;
+            document.getElementById('resultado').innerText = `Equivalentes a ${resultado} Pesos Colombianos`;
+        }
+    </script>
+    <br><br><br><br><hr>
+    <div>
+        <iframe class="esf" src="https://www.google.com/maps/d/embed?mid=1ojSclIl4YLcUSgBzSH_SBNV_8cI&ehbc=2E312F" width="640" height="480"></iframe>
+        <blockquote class="cita"><span style="font-size: 30px;">Emerson Velez Jaramillo ©</span></blockquote>
+    </div>
+</body>
+</html>
